@@ -1,0 +1,74 @@
+/** reset **/
+
+/** content **/
+
+/** map **/
+.page-wrap, iframe {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+/** menu **/
+.navbar {
+    position: absolute;
+    z-index: 900;
+}
+
+/* PUSH MENU */
+#menu-switch{
+  display:none;
+}
+#menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 900;
+    width: 300px;
+    height: 100%;
+    padding: 50px 30px;
+
+    -webkit-transition: all .3s ease-in;
+       -moz-transition: all .3s ease-in;
+         -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+    text-align: center;
+
+    background-color: #161325;
+}
+
+#menu-switch:checked ~ #menu {
+    right: 0;
+}
+
+/* MENU TOGGLE ICON */
+#menu-toggle:focus {
+    outline: none;
+}
+#menu-toggle {
+    display:inline-block;
+    position: absolute;
+    z-index: 9999;
+    width: 51px;
+    height: 51px;
+    right: 0;
+    top: 100px;
+    cursor: pointer;
+    border: none;
+    background: #161325;
+    color: #fff;
+      -webkit-transition: all .5s ease;
+       -moz-transition: all .5s ease;
+         -o-transition: all .5s ease;
+            transition: all .5s ease;
+    padding: 10px;
+}
+
+#menu-toggle i {
+    font-size: 2em;
+    text-align: center;
+}
+#menu-switch:checked ~ .page-wrap #menu-toggle {
+    right: 300px;   
+}
